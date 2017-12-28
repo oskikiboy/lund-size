@@ -1,0 +1,14 @@
+{
+  "name": "lund-size",
+  "version": "1.0.0",
+  "description": "Determine your penis size!",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "oskikiboy",
+  "license": "ISC",
+  "dependencies": {
+    "figlet": "^1.2.0"
+  }
+}
