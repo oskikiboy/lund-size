@@ -3,9 +3,10 @@
  * ---------
  *
  * Written by oskikiboy
+ * Chinese code fixed by TTtie
  */
 
-const figlet = require("figlet");
+const figlet = require("util").promisify(require("figlet"));
 
 const determine = () => {
     if (process.argv.includes("--china")) {
@@ -16,13 +17,10 @@ const determine = () => {
 }
 
 const asciify = () => {
-    figlet(determine(), function(err, data) {
-        if (err) {
+figlet(determine()).then(data => console.log(`Your lund length is: \n${data}`)).catch(err => {
             console.log('Something went wrong...');
             console.dir(err);
             return;
-        }
-        console.log(`Your lund length is: \n${data}`)
     });
 }
 
