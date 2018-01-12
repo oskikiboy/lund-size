@@ -4,7 +4,7 @@
   "description": "Determine your penis size!",
   "main": "index.js",
   "scripts": {
-    "test": "start"
+    "start": "node src/index"
   },
   "author": "oskikiboy",
   "license": "ISC",
