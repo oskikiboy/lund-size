@@ -48,7 +48,7 @@ const countdown = () => {
     }, 1000)
 }
 
-const determine = (amount) => {
+const determine = amount => {
     if (process.argv.includes("--china")) {
         return `8=D`;
     } else {
