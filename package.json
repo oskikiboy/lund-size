@@ -4,7 +4,10 @@
   "description": "Determine your penis size!",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index"
+    "start": "node src/index",
+    "spam": "npm start --spam",
+    "superspam": "npm start --superspam",
+    "init": "npm install && npm start"
   },
   "author": "oskikiboy",
   "license": "ISC",
