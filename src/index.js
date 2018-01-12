@@ -22,9 +22,9 @@ const spamme = () => {
                 asciify()
             } else {
                 if (process.argv.includes("--nonum")) {
-                    console.log(`${determine()}`)
+                    console.log(`${determine(175)}`)
                 } else {
-                    console.log(`No. ${x}\n\t${determine()}`)
+                    console.log(`No. ${x}\n\t${determine(175)}`)
                 }
             }
 
@@ -48,16 +48,16 @@ const countdown = () => {
     }, 1000)
 }
 
-const determine = () => {
+const determine = (amount) => {
     if (process.argv.includes("--china")) {
         return `8=D`;
     } else {
-        return `8${"=".repeat(Math.floor(Math.random() * 175) + 1)}D`
+        return `8${"=".repeat(Math.floor(Math.random() * amount) + 1)}D`
     }
 }
 
 const asciify = () => {
-    figlet(determine()).then(data => console.log(`Your lund length is: \n${data}`)).catch(err => {
+    figlet(determine(12)).then(data => console.log(`Your lund length is: \n${data}`)).catch(err => {
         console.log('Something went wrong...');
         console.dir(err);
         return;
@@ -90,7 +90,7 @@ const main = () => {
         if (process.argv.includes("--ascii")) {
             asciify()
         } else {
-            console.log(`Your lund length is: \n\t${determine()}`)
+            console.log(`Your lund length is: \n\t${determine(12)}`)
         }
     }
 }
